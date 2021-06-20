@@ -1,5 +1,5 @@
 # Specflow-Ui-Api
-UI tests for SuperHeros and SUperVillain project
+UI tests for SuperHeros and SuperVillain project
 
 UI Technical Stack Used:
 C#,
