@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title></title>
+  <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@3da944e596e81f10ac6c1042c792af8a5a741023/commons/img/logo.png">
+  <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@3da944e596e81f10ac6c1042c792af8a5a741023/commons/img/logo.png">
+  <link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@8539670db814bf19a0ddbe9a6d19058aea0cf981/spark/css/spark-style.css" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style> </style>
+</head>
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<body class="spa bdd-report">
+    <div class="app header-dark side-nav-folded">
+        <div class="layout">
+            <div class="header navbar">
+    <div class="header-container">
+        <div class="nav-logo">
+          <a href="index.html">
+            <div class="logo logo-dark" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+            <div class="logo logo-white" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+          </a>
+        </div>
+        <ul class="nav-left">
+          <li>
+            <a class="sidenav-fold-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+            <a class="sidenav-expand-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+          <li class="search-box">
+            <a class="search-toggle" href="javascript:void(0);">
+              <i class="search-icon fa fa-search"></i>
+              <i class="search-icon-close fa fa-close"></i>
+            </a>
+          </li>
+          <li class="search-input">
+            <input id="search-tests" class="form-control" type="text" placeholder="Type to search...">
+          </li>
+        </ul>
+        <ul class="nav-right">
+          <li class="m-r-10">
+            <a href="#">
+              <span class="badge badge-primary"></span>
+            </a>
+          </li>
+            <li class="m-r-10">
+                <a href="#">
+                    <span class="badge badge-primary">6/21/2021 1:12:09 AM</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+            <div class="side-nav side-nav-folded">
+  <div class="side-nav-inner">
+    <ul class="side-nav-menu scrollable">
+      <li class="nav-item dropdown" onclick="toggleView('test-view')">
+        <a id="nav-test" class="dropdown-toggle" href="index.html">
+          <span class="icon-holder">
+            <i class="fa fa-align-left"></i>
+          </span>
+          <span class="title">Tests</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown" onclick="toggleView('tag-view')">
+        <a id="nav-tag" class="dropdown-toggle" href="tag.html">
+          <span class="icon-holder">
+            <i class="fa fa-tag"></i>
+          </span>
+          <span class="title">Tags</span>
+        </a>
+      </li>
+            <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+        <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
+          <span class="icon-holder">
+            <i class="fa fa-bar-chart"></i>
+          </span>
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="side-nav-controls">
+    <ul>
+      <li>
+        <a href="#" class="lightsout" style="color:#8a8a8a;">
+          <i class="fa fa-desktop"></i>"</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+            <div class="page-container">
+                <div class="main-content">
+                    <div class="test-wrapper row test-view">
+    <div class="test-list">
+        <div class="test-list-tools">
+            <ul class="tools pull-left">
+                <li>
+                    <a href="">
+                        <span class="font-size-14">Tests</span>
+                    </a>
+                </li> 
+            </ul>
+            <ul class="tools text-right">
+				<li class="user-profile dropdown dropdown-animated scale-left">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="fa fa-exclamation-circle"></i>
+					</a>
+					<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a status="pass" class="dropdown-item" href="#"><span>Pass</span><span class="status success pull-right"></span></a>																																				<div class="dropdown-divider"></div>
+						<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+					</ul>
+				</li>
+								<li class="user-profile dropdown dropdown-animated scale-left">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="fa fa-tag"></i>
+					</a>
+					<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+							<a class="dropdown-item" href="#">Api_NewUser</a>
+							<a class="dropdown-item" href="#">Api_GetUsers</a>
+							<a class="dropdown-item" href="#">Api_UpdateUser</a>
+							<a class="dropdown-item" href="#">UI_FinalScore</a>
+							<a class="dropdown-item" href="#">Web</a>
+							<a class="dropdown-item" href="#">UI_NegativeTest</a>
+							<a class="dropdown-item" href="#">UI_NextChallenge</a>
+							<a class="dropdown-item" href="#">UI_TimeOut</a>
+							<a class="dropdown-item" href="#">UI_Login</a>
+					</ul>
+                </li>
+				            </ul>
+        </div>
+        <div class="test-list-wrapper scrollable">
+            <ul class="test-list-item">
+					<li class="test-item" status="pass" author="" device="" tag="" test-id="1"> 
+						<div class="status-avatar pass-bg">
+							<i class="fa fa-check text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">Supervillain Herokuapp Api Tests</p> 
+								<p class="duration text-sm">0h:0m:8s+231ms</p> 
+								<span class="datetime">01:12:09 AM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-pass">Supervillain Herokuapp Api Tests</h5>
+										<span class='badge badge-success'>6/21/2021 1:12:09 AM</span>
+										<span class='badge badge-danger'>6/21/2021 1:12:18 AM</span>
+										<span class='badge badge-default'>0h:0m:8s+231ms</span>
+									</div>
+																	</div>
+							</div>
+
+<div class="accordion mt-4">
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">Scenario: Create a new user</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+                    <div class="card-body">
+                                                    <div class="d-flex align-items-center justify-content-start given" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Given I want to validate the creation of new user's endpoint</span>
+                            </div>
+			<div class="details"></div>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I requested "POST" operation to create new user to fetch the response</span>
+                            </div>
+			<div class="details"></div>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then I should see the 201 status code</span>
+                            </div>
+			<div class="details"></div>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then I see the response of new user being created successfully</span>
+                            </div>
+			<div class="details"></div>
+                    </div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">Scenario: Get list of users and validate the schema</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+                    <div class="card-body">
+                                                    <div class="d-flex align-items-center justify-content-start given" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Given I want to validate the users endpoint</span>
+                            </div>
+			<div class="details"></div>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I requested "GET" operation and fetch the response</span>
+                            </div>
+			<div class="details"></div>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then I should see the 200 status code</span>
+                            </div>
+			<div class="details"></div>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then I should validate the users response</span>
+                            </div>
+			<div class="details"></div>
+                    </div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">Scenario: Update a user</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+                    <div class="card-body">
+                                                    <div class="d-flex align-items-center justify-content-start given" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Given I want to validate the creation of new user's endpoint</span>
+                            </div>
+			<div class="details"></div>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I requested "PUT" operation to amend the score for the user "Test" and fetch the response</span>
+                            </div>
+			<div class="details"></div>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then I should see the 201 status code</span>
+                            </div>
+			<div class="details"></div>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then I see the response of the user score has been updated successfully</span>
+                            </div>
+			<div class="details"></div>
+                    </div>
+				</div>
+	</div>
+</div>
+						</div>
+					</li>
+					<li class="test-item" status="pass" author="" device="" tag="" test-id="17"> 
+						<div class="status-avatar pass-bg">
+							<i class="fa fa-check text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">User Challenge</p> 
+								<p class="duration text-sm">0h:1m:37s+190ms</p> 
+								<span class="datetime">01:12:18 AM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-pass">User Challenge</h5>
+										<span class='badge badge-success'>6/21/2021 1:12:18 AM</span>
+										<span class='badge badge-danger'>6/21/2021 1:13:55 AM</span>
+										<span class='badge badge-default'>0h:1m:37s+190ms</span>
+									</div>
+																	</div>
+							</div>
+
+<div class="accordion mt-4">
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">Scenario: Final Score of the Challenge</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+                    <div class="card-body">
+                                                    <div class="d-flex align-items-center justify-content-start given" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Given I login to to Responsive Fight of Covid19 application</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpB4C9.png' src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpB4C9.png' data-src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpB4C9.png'></span>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When the user start the challenge 'Take the bus'</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpC832.png' src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpC832.png' data-src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpC832.png'></span>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When the user choose the correct answer</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpC99B.png' src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpC99B.png' data-src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpC99B.png'></span>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then the score '100' is displayed</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpCAD4.png' src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpCAD4.png' data-src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpCAD4.png'></span>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When the user check the final score</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpCDC3.png' src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpCDC3.png' data-src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpCDC3.png'></span>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then the final score '5000' is displayed</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpD67F.png' src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpD67F.png' data-src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpD67F.png'></span>
+                    </div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">Scenario: Validate Incorrect answer in challenge</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+                    <div class="card-body">
+                                                    <div class="d-flex align-items-center justify-content-start given" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Given I login to to Responsive Fight of Covid19 application</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp12EC.png' src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp12EC.png' data-src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp12EC.png'></span>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When the user start the challenge 'Take the bus'</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp1A9E.png' src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp1A9E.png' data-src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp1A9E.png'></span>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When the user choose the incorrect answer</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp1C26.png' src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp1C26.png' data-src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp1C26.png'></span>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then the try again option is displayed</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp1D21.png' src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp1D21.png' data-src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp1D21.png'></span>
+                    </div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">Scenario: Validate Next Challenge exist</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+                    <div class="card-body">
+                                                    <div class="d-flex align-items-center justify-content-start given" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Given I login to to Responsive Fight of Covid19 application</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp4AAA.png' src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp4AAA.png' data-src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp4AAA.png'></span>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When the user start the challenge 'Take the bus'</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp5E14.png' src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp5E14.png' data-src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp5E14.png'></span>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When the user choose the correct answer</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp5F4D.png' src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp5F4D.png' data-src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp5F4D.png'></span>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then the next challenge is displayed</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp6068.png' src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp6068.png' data-src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp6068.png'></span>
+                    </div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">Scenario: Validate Timeout</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+                    <div class="card-body">
+                                                    <div class="d-flex align-items-center justify-content-start given" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Given I login to to Responsive Fight of Covid19 application</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpA198.png' src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpA198.png' data-src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpA198.png'></span>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When the user start the challenge 'Go to a public place'</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpA8EC.png' src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpA8EC.png' data-src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpA8EC.png'></span>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When the challenge timeout</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpD0F7.png' src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpD0F7.png' data-src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmpD0F7.png'></span>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then the covid poster is displayed</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp65.png' src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp65.png' data-src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp65.png'></span>
+                    </div>
+				</div>
+	</div>
+</div>
+						</div>
+					</li>
+					<li class="test-item" status="pass" author="" device="" tag="" test-id="40"> 
+						<div class="status-avatar pass-bg">
+							<i class="fa fa-check text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">User Login</p> 
+								<p class="duration text-sm">0h:0m:9s+812ms</p> 
+								<span class="datetime">01:13:59 AM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-pass">User Login</h5>
+										<span class='badge badge-success'>6/21/2021 1:13:59 AM</span>
+										<span class='badge badge-danger'>6/21/2021 1:14:09 AM</span>
+										<span class='badge badge-default'>0h:0m:9s+812ms</span>
+									</div>
+																	</div>
+							</div>
+
+<div class="accordion mt-4">
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">Scenario: Login to ResponsiveFight Covid19 Application</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+                    <div class="card-body">
+                                                    <div class="d-flex align-items-center justify-content-start given" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Given I enter to Responsive Fight of Covid19 application</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp2870.png' src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp2870.png' data-src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp2870.png'></span>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I create a warrior name with random name</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp33BB.png' src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp33BB.png' data-src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp33BB.png'></span>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then I should see the new user has been created</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp3524.png' src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp3524.png' data-src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp3524.png'></span>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then I should see the dashboard of Responsive Fight of Covid19</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp369C.png' src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp369C.png' data-src='C:\Satish_Workspace\CBA_Test\Working\SpecFlow_Web-Api\SeleniumSpecFlow\TestResults\Img\tmp369C.png'></span>
+                    </div>
+				</div>
+	</div>
+</div>
+						</div>
+					</li>
+            </ul>    
+        </div>
+    </div>
+    <div class="test-content scrollable">
+        <div class="test-content-tools">
+            <ul>
+                <li>
+                    <a class="back-to-test" href="javascript:void(0)">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="test-content-detail">
+            <div class="detail-body"></div>
+        </div>
+    </div>
+</div>
+<div class="test-wrapper row tag-view attributes-view">
+    <div class="test-list">
+        <div class="test-list-tools">
+            <ul class="tools pull-left">
+                <li>
+                    <a href="">
+                        <span class="font-size-14">Tags</span>
+                    </a>
+                </li> 
+            </ul>
+            <ul class="tools text-right">
+                <li>
+                    <a href="#">
+                        <span class="badge badge-primary">9</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="test-list-wrapper scrollable">
+            <ul class="test-list-item">
+
+<li class="test-item">
+  <div class="open-test">
+    <div class="test-detail">
+      <p class="name">Api_NewUser</p>
+      <p class="duration text-sm">1 tests</p>
+      <span class="datetime">
+ <span class='badge badge-success'>1</span>                               </span>
+    </div>
+  </div>
+  <div class="test-contents d-none">
+    <div class="info">
+      <h4>Api_NewUser</h4>
+ <span class='badge badge-success'>1 passed</span>                       </div>
+    <table class='table table-sm mt-4'>
+      <thead>
+        <tr>
+          <th class="status-col">Status</th>
+          <th class="timestamp-col">Timestamp</th>
+          <th>TestName</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>01:12:09</td>
+          <td class='linked' test-id='2' root-id="1">
+            <a href="#">Supervillain Herokuapp Api Tests.Create a new user</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</li>
+<li class="test-item">
+  <div class="open-test">
+    <div class="test-detail">
+      <p class="name">Api_GetUsers</p>
+      <p class="duration text-sm">1 tests</p>
+      <span class="datetime">
+ <span class='badge badge-success'>1</span>                               </span>
+    </div>
+  </div>
+  <div class="test-contents d-none">
+    <div class="info">
+      <h4>Api_GetUsers</h4>
+ <span class='badge badge-success'>1 passed</span>                       </div>
+    <table class='table table-sm mt-4'>
+      <thead>
+        <tr>
+          <th class="status-col">Status</th>
+          <th class="timestamp-col">Timestamp</th>
+          <th>TestName</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>01:12:15</td>
+          <td class='linked' test-id='7' root-id="1">
+            <a href="#">Supervillain Herokuapp Api Tests.Get list of users and validate the schema</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</li>
+<li class="test-item">
+  <div class="open-test">
+    <div class="test-detail">
+      <p class="name">Api_UpdateUser</p>
+      <p class="duration text-sm">1 tests</p>
+      <span class="datetime">
+ <span class='badge badge-success'>1</span>                               </span>
+    </div>
+  </div>
+  <div class="test-contents d-none">
+    <div class="info">
+      <h4>Api_UpdateUser</h4>
+ <span class='badge badge-success'>1 passed</span>                       </div>
+    <table class='table table-sm mt-4'>
+      <thead>
+        <tr>
+          <th class="status-col">Status</th>
+          <th class="timestamp-col">Timestamp</th>
+          <th>TestName</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>01:12:16</td>
+          <td class='linked' test-id='12' root-id="1">
+            <a href="#">Supervillain Herokuapp Api Tests.Update a user</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</li>
+<li class="test-item">
+  <div class="open-test">
+    <div class="test-detail">
+      <p class="name">UI_FinalScore</p>
+      <p class="duration text-sm">1 tests</p>
+      <span class="datetime">
+ <span class='badge badge-success'>1</span>                               </span>
+    </div>
+  </div>
+  <div class="test-contents d-none">
+    <div class="info">
+      <h4>UI_FinalScore</h4>
+ <span class='badge badge-success'>1 passed</span>                       </div>
+    <table class='table table-sm mt-4'>
+      <thead>
+        <tr>
+          <th class="status-col">Status</th>
+          <th class="timestamp-col">Timestamp</th>
+          <th>TestName</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>01:12:23</td>
+          <td class='linked' test-id='18' root-id="17">
+            <a href="#">User Challenge.Final Score of the Challenge</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</li>
+<li class="test-item">
+  <div class="open-test">
+    <div class="test-detail">
+      <p class="name">Web</p>
+      <p class="duration text-sm">5 tests</p>
+      <span class="datetime">
+ <span class='badge badge-success'>5</span>                               </span>
+    </div>
+  </div>
+  <div class="test-contents d-none">
+    <div class="info">
+      <h4>Web</h4>
+ <span class='badge badge-success'>5 passed</span>                       </div>
+    <table class='table table-sm mt-4'>
+      <thead>
+        <tr>
+          <th class="status-col">Status</th>
+          <th class="timestamp-col">Timestamp</th>
+          <th>TestName</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>01:12:23</td>
+          <td class='linked' test-id='18' root-id="17">
+            <a href="#">User Challenge.Final Score of the Challenge</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>01:12:47</td>
+          <td class='linked' test-id='25' root-id="17">
+            <a href="#">User Challenge.Validate Incorrect answer in challenge</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>01:13:05</td>
+          <td class='linked' test-id='30' root-id="17">
+            <a href="#">User Challenge.Validate Next Challenge exist</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>01:13:24</td>
+          <td class='linked' test-id='35' root-id="17">
+            <a href="#">User Challenge.Validate Timeout</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>01:14:05</td>
+          <td class='linked' test-id='41' root-id="40">
+            <a href="#">User Login.Login to ResponsiveFight Covid19 Application</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</li>
+<li class="test-item">
+  <div class="open-test">
+    <div class="test-detail">
+      <p class="name">UI_NegativeTest</p>
+      <p class="duration text-sm">1 tests</p>
+      <span class="datetime">
+ <span class='badge badge-success'>1</span>                               </span>
+    </div>
+  </div>
+  <div class="test-contents d-none">
+    <div class="info">
+      <h4>UI_NegativeTest</h4>
+ <span class='badge badge-success'>1 passed</span>                       </div>
+    <table class='table table-sm mt-4'>
+      <thead>
+        <tr>
+          <th class="status-col">Status</th>
+          <th class="timestamp-col">Timestamp</th>
+          <th>TestName</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>01:12:47</td>
+          <td class='linked' test-id='25' root-id="17">
+            <a href="#">User Challenge.Validate Incorrect answer in challenge</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</li>
+<li class="test-item">
+  <div class="open-test">
+    <div class="test-detail">
+      <p class="name">UI_NextChallenge</p>
+      <p class="duration text-sm">1 tests</p>
+      <span class="datetime">
+ <span class='badge badge-success'>1</span>                               </span>
+    </div>
+  </div>
+  <div class="test-contents d-none">
+    <div class="info">
+      <h4>UI_NextChallenge</h4>
+ <span class='badge badge-success'>1 passed</span>                       </div>
+    <table class='table table-sm mt-4'>
+      <thead>
+        <tr>
+          <th class="status-col">Status</th>
+          <th class="timestamp-col">Timestamp</th>
+          <th>TestName</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>01:13:05</td>
+          <td class='linked' test-id='30' root-id="17">
+            <a href="#">User Challenge.Validate Next Challenge exist</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</li>
+<li class="test-item">
+  <div class="open-test">
+    <div class="test-detail">
+      <p class="name">UI_TimeOut</p>
+      <p class="duration text-sm">1 tests</p>
+      <span class="datetime">
+ <span class='badge badge-success'>1</span>                               </span>
+    </div>
+  </div>
+  <div class="test-contents d-none">
+    <div class="info">
+      <h4>UI_TimeOut</h4>
+ <span class='badge badge-success'>1 passed</span>                       </div>
+    <table class='table table-sm mt-4'>
+      <thead>
+        <tr>
+          <th class="status-col">Status</th>
+          <th class="timestamp-col">Timestamp</th>
+          <th>TestName</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>01:13:24</td>
+          <td class='linked' test-id='35' root-id="17">
+            <a href="#">User Challenge.Validate Timeout</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</li>
+<li class="test-item">
+  <div class="open-test">
+    <div class="test-detail">
+      <p class="name">UI_Login</p>
+      <p class="duration text-sm">1 tests</p>
+      <span class="datetime">
+ <span class='badge badge-success'>1</span>                               </span>
+    </div>
+  </div>
+  <div class="test-contents d-none">
+    <div class="info">
+      <h4>UI_Login</h4>
+ <span class='badge badge-success'>1 passed</span>                       </div>
+    <table class='table table-sm mt-4'>
+      <thead>
+        <tr>
+          <th class="status-col">Status</th>
+          <th class="timestamp-col">Timestamp</th>
+          <th>TestName</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>01:14:05</td>
+          <td class='linked' test-id='41' root-id="40">
+            <a href="#">User Login.Login to ResponsiveFight Covid19 Application</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</li>            </ul>    
+        </div>
+    </div>
+    <div class="test-content scrollable">
+        <div class="test-content-tools">
+            <ul>
+                <li>
+                    <a class="back-to-test" href="javascript:void(0)">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="test-content-detail">
+            <div class="detail-body"></div>
+        </div>
+    </div>
+</div>										<div class="container-fluid p-4 dashboard-view">
+	<div class="row">
+		<div class="col-sm-12 col-md-4">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Features</h6>
+				</div>
+				<div class="card-body">
+	                <div class="">
+	                    <canvas id='parent-analysis' width='115' height='90'></canvas>
+	                </div>
+	            </div>
+	            <div class="card-footer">
+	                <div><small data-tooltip='100%'>
+	                    <b>3</b> features passed
+                    </small></div>
+	                <div>
+	                    <small data-tooltip='0%'><b>0</b> features failed, 
+	                    <b data-tooltip='0%'>0</b> others
+	                    </small>
+                    </div>
+	            </div>
+			</div>
+		</div>
+		<div class="col-sm-12 col-md-4">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Scenarios</h6>
+				</div>
+				<div class="card-body">
+	                <div class="">
+	                    <canvas id='child-analysis' width='115' height='90'></canvas>
+	                </div>
+	            </div>
+	            <div class="card-footer">
+	                <div><small data-tooltip='100%'><b>8</b> scenarios passed</small></div>
+	                <div>
+	                    <small data-tooltip='0%'><b>0</b> scenarios failed, 
+	                    <b data-tooltip='0%'>0</b> others
+	                    </small>
+                    </div>
+	            </div>
+			</div>
+		</div>
+				<div class="col-sm-12 col-md-4">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Steps</h6>
+				</div>
+				<div class="card-body">
+	                <div class="">
+	                    <canvas id='grandchild-analysis' width='115' height='90'></canvas>
+	                </div>
+	            </div>
+	            <div class="card-footer">
+	                <div><small data-tooltip='100%'><b>34</b> steps passed</small></div>
+	                <div>
+	                    <small data-tooltip='0%'><b>0</b> steps failed, 
+	                    <b data-tooltip='0%'>0</b> others
+	                    </small>
+                    </div>
+	            </div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+	                <div class="media justify-content-between">
+						<div>
+							<h6 class="card-title">Features</h6>
+							<h2 class="font-size-28 font-weight-light">3</h2>
+							<span class="text-semibold text-success font-size-15">
+							<i class="ti-arrow-up font-size-11"></i> 
+								<span>100%</span>
+							</span>
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-align-left font-size-70 opacity-01"></i>
+						</div>
+					</div>
+	            </div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+	                <div class="media justify-content-between">
+						<div>
+							<h6 class="card-title">Scenarios</h6>
+							<h2 class="font-size-28 font-weight-light">8</h2>
+							<span class="text-semibold text-success font-size-15">
+							<i class="ti-arrow-up font-size-11"></i> 
+								<span>100%</span>
+							</span>
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-align-left font-size-70 opacity-01"></i>
+						</div>
+					</div>
+	            </div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+	                <div class="media justify-content-between">
+						<div>
+							<h6 class="card-title">Start</h6>
+							<h6 class="font-weight-light">6/21/2021 1:12:09 AM</h6>
+							<span class="text-semibold text-success font-size-15">
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-clock-o font-size-70 text-success opacity-01"></i>
+						</div>
+					</div>
+	            </div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+	                <div class="media justify-content-between">
+						<div>
+							<h6 class="card-title">Duration</h6>
+							<h6 class="font-weight-light">00:01:59.4867097</h6>
+							<span class="text-semibold text-danger font-size-15">
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-clock-o font-size-70 text-danger opacity-01"></i>
+						</div>
+					</div>
+	            </div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+				<div class="col-md-6">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Tags</h6>
+				</div>
+				<div class="table-overflow">
+					<table class="table table-sm">
+						<thead>
+							<tr class="bg-gray">
+								<th>Name</th>
+								<th>Passed</th>
+								<th>Failed</th>
+								<th>Others</th>
+								<th>Passed %</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Api_NewUser</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>100%</td>
+							</tr>
+							<tr>
+								<td>Api_GetUsers</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>100%</td>
+							</tr>
+							<tr>
+								<td>Api_UpdateUser</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>100%</td>
+							</tr>
+							<tr>
+								<td>UI_FinalScore</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>100%</td>
+							</tr>
+							<tr>
+								<td>Web</td>
+								<td>5</td>
+								<td>0</td>
+								<td>0</td>
+								<td>100%</td>
+							</tr>
+							<tr>
+								<td>UI_NegativeTest</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>100%</td>
+							</tr>
+							<tr>
+								<td>UI_NextChallenge</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>100%</td>
+							</tr>
+							<tr>
+								<td>UI_TimeOut</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>100%</td>
+							</tr>
+							<tr>
+								<td>UI_Login</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>100%</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+					</div>
+</div>
+<script>
+	var statusGroup = {
+    parentCount: 3,
+		passParent: 3,
+		failParent: 0,
+		fatalParent: 0,
+		errorParent: 0,
+		warningParent: 0,
+		skipParent: 0,
+		exceptionsParent: 0,
+		childCount: 8,
+		passChild: 8,
+		failChild: 0,
+		fatalChild: 0,
+		errorChild: 0,
+		warningChild: 0,
+		skipChild: 0,
+		infoChild: 0,
+		debugChild: 0,
+		exceptionsChild: 0,
+		grandChildCount: 34,
+		passGrandChild: 34,
+		failGrandChild: 0,
+		fatalGrandChild: 0,
+		errorGrandChild: 0,
+		warningGrandChild: 0,
+		skipGrandChild: 0,
+		infoGrandChild: 0,
+		debugGrandChild: 0,
+		exceptionsGrandChild: 0,
+	};
+</script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+	<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@cc89904c1a12065be1d08fc4994a258ef01b12bd/spark/js/scripts.js"></script>
+<script type='text/javascript'>
+	
+</script>
+</body>
+
+</html>
