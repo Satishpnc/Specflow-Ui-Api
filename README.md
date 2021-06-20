@@ -2,15 +2,15 @@
 UI tests for SuperHeros and SUperVillain project
 
 UI Technical Stack Used:
-C#
-Specflow
-Selenium
-Chrome driver
+C#,
+Specflow,
+Selenium,
+Chrome driver,
 Nunit
 
 API Technical Stack Used:
-C#
-Specflow
+C#,
+Specflow,
 RestSharp
 
 Execution Steps:
